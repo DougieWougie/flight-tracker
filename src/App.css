@@ -25,6 +25,12 @@ header h1 {
   background: white;
   border-radius: 15px;
   margin-bottom: 30px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .loading {
+  background: #1e1e2e;
+  color: #e0e0e0;
 }
 
 .spinner {
@@ -35,6 +41,12 @@ header h1 {
   height: 40px;
   animation: spin 1s linear infinite;
   margin: 0 auto 15px;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-mode .spinner {
+  border-color: #3a3a4e;
+  border-top-color: #8b9bff;
 }
 
 @keyframes spin {

@@ -4,6 +4,12 @@
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .flight-card {
+  background: #1e1e2e;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
@@ -24,12 +30,22 @@
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 2px solid #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-mode .flight-header {
+  border-bottom-color: #3a3a4e;
 }
 
 .flight-header h2 {
   color: #333;
   font-size: 2em;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .flight-header h2 {
+  color: #e0e0e0;
 }
 
 .status-badge {
@@ -77,12 +93,22 @@
   font-weight: 700;
   color: #667eea;
   margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .airport-code {
+  color: #8b9bff;
 }
 
 .airport-name {
   color: #666;
   font-size: 0.9em;
   margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .airport-name {
+  color: #a0a0a0;
 }
 
 .time-info {
@@ -93,18 +119,33 @@
   color: #999;
   font-size: 0.8em;
   margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .time-label {
+  color: #888;
 }
 
 .time {
   font-size: 1.5em;
   font-weight: 600;
   color: #333;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .time {
+  color: #e0e0e0;
 }
 
 .gate {
   color: #666;
   font-size: 0.9em;
   margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .gate {
+  color: #a0a0a0;
 }
 
 .flight-path {
@@ -122,6 +163,11 @@
   color: #666;
   font-size: 0.9em;
   white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .duration {
+  color: #a0a0a0;
 }
 
 .flight-details {
@@ -131,6 +177,11 @@
   padding: 20px;
   background: #f8f9fa;
   border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .flight-details {
+  background: #2a2a3e;
 }
 
 .detail-item {
@@ -143,12 +194,22 @@
   color: #999;
   font-size: 0.85em;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .detail-item .label {
+  color: #888;
 }
 
 .detail-item .value {
   color: #333;
   font-weight: 600;
   font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .detail-item .value {
+  color: #e0e0e0;
 }
 
 @media (max-width: 768px) {
