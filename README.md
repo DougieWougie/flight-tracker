@@ -1,16 +1,144 @@
-# React + Vite
+# Flight Tracker ✈️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for looking up real-time flight route information using the ADSBDB API.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-5-purple)
+![API](https://img.shields.io/badge/API-ADSBDB-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Real Flight Route Data** - Fetches actual airline and airport information from ADSBDB API
+- **Flight Search** - Look up flights by callsign (e.g., AA1234, UA2345, DL1234)
+- **Distance Calculation** - Calculates flight duration based on airport coordinates
+- **Beautiful UI** - Modern gradient design with smooth animations
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
+- **Live Updates** - Hot module reloading for instant development feedback
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What's Real vs Simulated
 
-## Expanding the ESLint configuration
+### Real Data (from ADSBDB API):
+- Airline names and codes (IATA/ICAO)
+- Origin and destination airports
+- Airport names, codes, cities, and coordinates
+- Flight route information
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Simulated Data:
+- Departure and arrival times
+- Gate and terminal assignments
+- Flight status (on-time, delayed, boarding)
+- Aircraft type
+- Baggage claim information
+
+*Note: The ADSBDB API provides flight route data but not real-time scheduling information, so times and operational details are simulated.*
+
+## Tech Stack
+
+- **React 18** - UI framework
+- **Vite** - Build tool and dev server
+- **ADSBDB API** - Flight route data source
+- **CSS3** - Modern styling with gradients and animations
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16+ and npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/DougieWougie/flight-tracker.git
+cd flight-tracker
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser to `http://localhost:5173`
+
+## Usage
+
+1. Enter a flight callsign (e.g., AA1234, UA2345, DL1234, BA117)
+2. Select a date (currently for reference only)
+3. Click "Search Flight"
+4. View detailed flight route information
+
+### Sample Flight Numbers to Try
+
+- **AA1234** - American Airlines
+- **UA2345** - United Airlines
+- **DL1234** - Delta Airlines
+- **BA117** - British Airways
+
+## Project Structure
+
+```
+flight-tracker/
+├── src/
+│   ├── components/
+│   │   ├── SearchForm.jsx      # Flight search input form
+│   │   ├── SearchForm.css      # Search form styles
+│   │   ├── FlightCard.jsx      # Flight details display
+│   │   └── FlightCard.css      # Flight card styles
+│   ├── services/
+│   │   └── flightApi.js        # API integration and data transformation
+│   ├── App.jsx                 # Main application component
+│   ├── App.css                 # App-level styles
+│   └── index.css               # Global styles
+├── public/                     # Static assets
+└── index.html                  # HTML entry point
+```
+
+## API Reference
+
+This app uses the [ADSBDB API](https://www.adsbdb.com/) for flight route data:
+
+- **Endpoint**: `https://api.adsbdb.com/v0/callsign/[CALLSIGN]`
+- **Method**: GET
+- **Response**: JSON with airline, origin, and destination details
+
+## Development
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- Flight route data provided by [ADSBDB](https://www.adsbdb.com/)
+- Built with [Vite](https://vitejs.dev/) and [React](https://react.dev/)
+
+---
+
+Built with [Claude Code](https://claude.com/claude-code) 🤖
