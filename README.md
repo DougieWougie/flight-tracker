@@ -136,8 +136,16 @@ MIT
 
 ## Acknowledgments
 
-- Flight route data provided by [ADSBDB](https://www.adsbdb.com/)
-- Built with [Vite](https://vitejs.dev/) and [React](https://react.dev/)
+This project uses the **[ADSBDB API](https://www.adsbdb.com/)** - a free, public API for aircraft, airlines, and flight routes. ADSBDB provides comprehensive aviation data including:
+- Aircraft information (registration, MODE-S codes)
+- Airline details (ICAO/IATA codes, callsigns)
+- Flight route data (origin, destination, callsigns)
+
+Special thanks to the ADSBDB team for maintaining this valuable resource for the aviation community. Visit [adsbdb.com](https://www.adsbdb.com/) to learn more about their API and data offerings.
+
+Also built with:
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [React](https://react.dev/) - JavaScript library for building user interfaces
 
 ---
 
